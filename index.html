@@ -42,24 +42,41 @@
 
         <!-- PANEL IZQUIERDO (30cm) -->
         <div class="panel panel-izq">
-          <div class="cab-logos caja-texto" style="margin-top: 0;">
-            <img src="img/uacam-azul.png" alt="UACAM">
-            <img class="esc" src="img/facultad-azul.png" alt="Facultad">
-          </div>
           
-          <section class="caja-texto interactivo-hover">
+          <!-- DATOS DEL EQUIPO Y PROYECTO (Esquina Superior Izquierda) -->
+          <section class="caja-datos interactivo-hover">
+            <div class="logos-institucionales">
+              <img src="img/uacam-azul.png" alt="UACAM">
+              <!-- Puedes agregar el logo de la facultad aquí si lo tienes -->
+            </div>
+            <div class="info-proyecto">
+              <p><b>Autor(es):</b><br>
+                Maria Fernanda Suárez Arias <br>
+                Aldair Eddiel Canul Cabrera <br>
+                Aaron David Chi Uc</p>
+              <p><b>Asesores:</b><br>Dr. J. Ramírez, Dr. J. Flores</p>
+              <p><b>Escuela:</b> Universidad Autónoma de Campeche</p>
+              <p><b>Nivel:</b> Universidad</p>
+              <p><b>Categoría:</b> Desarrollo de software</p>
+              <div class="numero-proyecto">
+                Número de proyecto:<br><span>41067</span>
+              </div>
+            </div>
+          </section>
+          
+          <section class="caja-texto interactivo-hover mt-1">
             <h2 class="caja-titulo">RESUMEN</h2>
-            <p>El proyecto <b>Fora de Lugar</b> desarrolla un videojuego narrativo en 2D centrado en visibilizar las dificultades económicas, emocionales y sociales de los estudiantes foráneos en Campeche. Su objetivo es transformar la percepción social en el entorno universitario, ofreciendo una simulación realista de presupuesto, vivienda y trabajo, con resultados validados mediante pruebas de empatía.</p>
+            <p>El proyecto <b>Fora de Lugar</b> desarrolla un videojuego narrativo en 2D centrado en visibilizar las dificultades económicas, emocionales y sociales de los estudiantes foráneos en Campeche. Su objetivo es transformar la percepción social en el entorno universitario mediante la empatía.</p>
           </section>
 
           <section class="caja-texto interactivo-hover">
             <h2 class="caja-titulo">PROBLEMA</h2>
-            <p class="pregunta">¿Es posible desarrollar una experiencia interactiva que identifique con precisión los retos cotidianos de los estudiantes foráneos y presente información útil para generar empatía en los locales mediante una plataforma accesible?</p>
+            <p class="pregunta">¿Es posible desarrollar una experiencia interactiva que identifique con precisión los retos cotidianos de los foráneos y presente información útil para generar empatía en los locales?</p>
           </section>
 
           <section class="caja-texto interactivo-hover">
             <h2 class="caja-titulo">HIPÓTESIS</h2>
-            <p>La inmersión interactiva en las problemáticas simuladas incrementará significativamente los índices de comprensión y empatía de los estudiantes locales hacia las dificultades socioeconómicas de sus compañeros foráneos.</p>
+            <p>La inmersión interactiva en las problemáticas simuladas incrementará significativamente los índices de comprensión y empatía de los estudiantes locales.</p>
           </section>
 
           <section class="caja-texto interactivo-hover mt-auto">
@@ -70,31 +87,11 @@
 
         <!-- PANEL CENTRAL (60cm) -->
         <div class="panel panel-centro">
-          
-          <header class="cab-centro">
-            <div class="marco-titulo interactivo-hover">
-              <img src="img/fora-logo.webp" alt="Fora de Lugar" class="logo-fora">
-            </div>
-            <p class="lema">Un videojuego para que los de aquí entiendan a los que vienen de lejos</p>
-          </header>
 
-          <section class="caja-texto interactivo-hover p-0">
-            <div class="ficha-datos">
-              <div>
-                <b>Autor(es):</b><br>
-                M. Suárez Arias · A. Canul Cabrera · A. Chi Uc
-              </div>
-              <div>
-                <b>Asesores:</b><br>
-                Dr. J. Ramírez Ortegón · Dr. J. Flores Escalante<br>
-              </div>
-            </div>
-            <div class="num-proy">Número de proyecto: <span>41067</span> | Categoría: Desarrollo de Software</div>
-          </section>
-
-          <section class="caja-texto interactivo-hover">
+          <!-- Sección 1: Fases y Capturas -->
+          <section class="caja-texto interactivo-hover" style="margin-top: 0;">
             <h2 class="caja-titulo">EXPERIMENTO Y DESARROLLO</h2>
-            <p style="margin-bottom: 1cqw;">El modelo utilizó una metodología mixta en 5 fases. Se recopilaron datos de 50 estudiantes foráneos para programar las mecánicas en Godot. El prototipo integró módulos de gestión de tiempo y minijuegos (pixel-art). Se aplicó un pre-test a 85 estudiantes locales, seguido de sesiones de juego y un post-test a 63 usuarios.</p>
+            <p style="margin-bottom: 1.2cqw; font-size: 1.1cqw;">El modelo utilizó una metodología mixta en 5 fases. Se recopilaron datos de 50 estudiantes foráneos para programar las mecánicas en Godot. El prototipo integró módulos de gestión de tiempo y minijuegos (pixel-art). Se aplicó un pre-test a 85 estudiantes locales, seguido de sesiones de juego y un post-test a 63 usuarios.</p>
             
             <div class="ruta" aria-label="Fases">
               <div class="fase f1"><span>1</span>Diagnóstico</div>
@@ -111,13 +108,46 @@
             </div>
           </section>
 
-          <section class="caja-texto interactivo-hover" aria-label="Análisis">
-            <h2 class="caja-titulo">ANÁLISIS DE RESULTADOS</h2>
-            <div id="graficas" class="graficas"></div>
-            <p class="nota">Gráfica de evolución de concientización (escala Likert). Pre-test vs Post-test.</p>
+          <!-- NUEVA SECCIÓN: Tecnologías -->
+          <section class="caja-texto interactivo-hover mt-1">
+            <h2 class="caja-titulo">ARQUITECTURA Y TECNOLOGÍAS</h2>
+            <div class="herramientas-grid">
+              <div class="tool-card">
+                <b>GODOT ENGINE</b>
+                <span>Motor Gráfico 2D</span>
+                <p>Implementación de mecánicas, máquinas de estado y UI utilizando el lenguaje <b>GDScript</b> y sistema de nodos.</p>
+              </div>
+              <div class="tool-card">
+                <b>GIT & GITHUB</b>
+                <span>Control de Versiones</span>
+                <p>Gestión de ramas de desarrollo, <i>commits</i> atómicos y trabajo colaborativo mediante repositorio remoto.</p>
+              </div>
+              <div class="tool-card">
+                <b>PIXEL ART</b>
+                <span>Diseño Visual</span>
+                <p>Creación de <i>spritesheets</i>, <i>tilesets</i> y animaciones frame-by-frame respetando paletas de color unificadas.</p>
+              </div>
+            </div>
+          </section>
+          <!-- NUEVA SECCIÓN: Workflow GitHub y Godot -->
+          <section class="caja-texto interactivo-hover mt-1">
+            <h2 class="caja-titulo">WORKFLOW: GODOT & GITHUB</h2>
+            <p style="font-size: 0.9cqw; margin-bottom: 0.5cqw;">El desarrollo colaborativo se estructuró para mantener un código limpio, modular y libre de conflictos durante la integración del proyecto:</p>
+            <ul class="biblio-lista" style="font-size: 0.85cqw; list-style: none; padding-left: 0;">
+              <li style="margin-bottom: 0.6cqw;">📦 <b>Arquitectura de Nodos (Godot):</b> Uso intensivo de <i>Singletons (Autoloads)</i> para variables globales (presupuesto, energía) y un patrón de diseño basado en <b>Señales</b> para desacoplar la UI de la lógica del juego.</li>
+              <li style="margin-bottom: 0.6cqw;">🌿 <b>Control de Ramas (Git):</b> Implementación de <i>Git Flow</i>. Rama <code>main</code> protegida para versiones estables, <code>dev</code> para integración continua y ramas <code>feature/</code> para programar cada nuevo minijuego por separado.</li>
+              <li>🔄 <b>Gestión de Tareas:</b> Organización de <i>sprints</i> mediante el tablero Kanban de <b>GitHub Projects</b>, vinculando <i>Issues</i> directamente con los <i>commits</i> de avance de cada desarrollador.</li>
+            </ul>
           </section>
 
-          <!-- Pie movido al panel central -->
+          <!-- Sección 3: Análisis (Le quitamos el flex-grow para que no se estire feo) -->
+          <section class="caja-texto interactivo-hover mt-1" aria-label="Análisis">
+            <h2 class="caja-titulo">ANÁLISIS DE RESULTADOS</h2>
+            <div id="graficas" class="graficas" style="gap: 1cqw; margin-top: 1cqw;"></div>
+            <p class="nota">Gráfica de evolución de concientización (escala Likert). Pre-test vs Post-test. La inmersión interactiva demostró ser una herramienta eficaz para modificar percepciones en un entorno universitario controlado.</p>
+          </section>
+
+          <!-- Pie de página con Pepe -->
           <footer class="pie">
             <div class="camino"><div class="pepe" id="pepe"></div><div class="perro"></div></div>
           </footer>
@@ -126,13 +156,13 @@
         <!-- PANEL DERECHO (30cm) -->
         <div class="panel panel-der">
           
-          <section class="caja-texto interactivo-hover text-center" style="margin-top: 1cqw;">
-            <h2 class="caja-titulo">PLATAFORMA WEB</h2>
+          <section class="caja-texto interactivo-hover text-center" style="margin-top: 0;">
+            <h2 class="caja-titulo" style="position:static; margin-bottom: 0.5cqw; transform: none; display: inline-block; box-shadow: .2cqw .2cqw 0 var(--oxido);">PLATAFORMA WEB</h2>
             <img src="img/qr.webp" alt="Código QR" class="img-qr">
             <p class="txt-qr">Escanea para acceder a la demo jugable</p>
           </section>
 
-          <section class="caja-texto interactivo-hover">
+          <section class="caja-texto interactivo-hover mt-1">
             <h2 class="caja-titulo">RESULTADO</h2>
             <p style="margin-bottom: 0.8cqw;">El sistema demostró incrementos estadísticos en empatía cognitiva. Se visibilizaron parámetros de soledad y presupuesto. El 78% de los foráneos validó la simulación.</p>
             <ul class="cifras">
@@ -143,7 +173,7 @@
 
           <section class="caja-texto interactivo-hover">
             <h2 class="caja-titulo">CONCLUSIÓN</h2>
-            <p>Sí se cumplió la hipótesis: la combinación de narrativas interactivas con minijuegos permitió desarrollar un modelo altamente efectivo para sensibilizar a la comunidad. Este avance sienta bases para su implementación en programas universitarios.</p>
+            <p>Sí se cumplió la hipótesis: la combinación de narrativas interactivas con minijuegos permitió desarrollar un modelo altamente efectivo para sensibilizar a la comunidad. Este avance sienta bases para su implementación en programas universitarios, fomentando la integración y el apoyo estudiantil.</p>
           </section>
 
           <section class="caja-texto interactivo-hover mt-auto">
@@ -152,6 +182,7 @@
               <li>Deterding, S. et al. (2011). From game design elements to gamefulness. <i>ACM</i>.</li>
               <li>Muñoz Díaz, L. (2026). Salud mental en estudiantes foráneos. <i>Rev. Psicología</i>.</li>
               <li>Olivier, E. (2019). Empathy building through interactive narrative games. <i>Tech</i>.</li>
+              <li>Wouters, P. (2013). Cognitive effects of serious games. <i>Ed. Psychology</i>.</li>
             </ul>
           </section>
           
