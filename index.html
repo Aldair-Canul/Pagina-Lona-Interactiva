@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lona Fora de Lugar | Infomatrix Campeche 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Press+Start+2P&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lona.css">
+</head>
+<body>
+
+<header class="barra" role="toolbar" aria-label="Controles de la lona">
+  <strong class="barra-titulo">Lona · Fora de Lugar</strong>
+  <label>Ancho (cm) <input id="inAncho" type="number" min="30" max="400" step="1" value="120"></label>
+  <label>Alto (cm) <input id="inAlto" type="number" min="30" max="400" step="1" value="120"></label>
+  <button id="btnAjustar" type="button">Ajustar a pantalla</button>
+  <button id="btnReal" type="button">Tamaño 1:10</button>
+  <button id="btnImprimir" type="button">Imprimir / PDF</button>
+  <span id="lectura" class="lectura" aria-live="polite"></span>
+</header>
+
+<main class="mesa" id="mesa">
+  <div class="escala" id="escala">
+    
+    <!-- Contenedor con líneas de medidas -->
+    <div class="medidas-wrapper">
+      
+      <div class="medida-top" aria-hidden="true">
+        <div class="m-30"><span>30 cm</span></div>
+        <div class="m-60"><span>60 cm</span></div>
+        <div class="m-30"><span>30 cm</span></div>
+      </div>
+
+      <div class="medida-side" aria-hidden="true">
+        <span>120 cm</span>
+      </div>
+
+      <!-- Mampara 3D -->
+      <article class="mampara-3d" id="lona" aria-label="Lona de Fora de Lugar">
+
+        <!-- PANEL IZQUIERDO (30cm) -->
+        <div class="panel panel-izq">
+          <div class="cab-logos caja-texto" style="margin-top: 0;">
+            <img src="img/uacam-azul.png" alt="UACAM">
+            <img class="esc" src="img/facultad-azul.png" alt="Facultad">
+          </div>
+          
+          <section class="caja-texto interactivo-hover">
+            <h2 class="caja-titulo">RESUMEN</h2>
+            <p>El proyecto <b>Fora de Lugar</b> desarrolla un videojuego narrativo en 2D centrado en visibilizar las dificultades económicas, emocionales y sociales de los estudiantes foráneos en Campeche. Su objetivo es transformar la percepción social en el entorno universitario, ofreciendo una simulación realista de presupuesto, vivienda y trabajo, con resultados validados mediante pruebas de empatía.</p>
+          </section>
+
+          <section class="caja-texto interactivo-hover">
+            <h2 class="caja-titulo">PROBLEMA</h2>
+            <p class="pregunta">¿Es posible desarrollar una experiencia interactiva que identifique con precisión los retos cotidianos de los estudiantes foráneos y presente información útil para generar empatía en los locales mediante una plataforma accesible?</p>
+          </section>
+
+          <section class="caja-texto interactivo-hover">
+            <h2 class="caja-titulo">HIPÓTESIS</h2>
+            <p>La inmersión interactiva en las problemáticas simuladas incrementará significativamente los índices de comprensión y empatía de los estudiantes locales hacia las dificultades socioeconómicas de sus compañeros foráneos.</p>
+          </section>
+
+          <section class="caja-texto interactivo-hover mt-auto">
+            <h2 class="caja-titulo">RETOS EVALUADOS</h2>
+            <div id="retos" class="retos"></div>
+          </section>
+        </div>
+
+        <!-- PANEL CENTRAL (60cm) -->
+        <div class="panel panel-centro">
+          
+          <header class="cab-centro">
+            <div class="marco-titulo interactivo-hover">
+              <img src="img/fora-logo.webp" alt="Fora de Lugar" class="logo-fora">
+            </div>
+            <p class="lema">Un videojuego para que los de aquí entiendan a los que vienen de lejos</p>
+          </header>
+
+          <section class="caja-texto interactivo-hover p-0">
+            <div class="ficha-datos">
+              <div>
+                <b>Autor(es):</b><br>
+                M. Suárez Arias · A. Canul Cabrera · A. Chi Uc
+              </div>
+              <div>
+                <b>Asesores:</b><br>
+                Dr. J. Ramírez Ortegón · Dr. J. Flores Escalante<br>
+              </div>
+            </div>
+            <div class="num-proy">Número de proyecto: <span>41067</span> | Categoría: Desarrollo de Software</div>
+          </section>
+
+          <section class="caja-texto interactivo-hover">
+            <h2 class="caja-titulo">EXPERIMENTO Y DESARROLLO</h2>
+            <p style="margin-bottom: 1cqw;">El modelo utilizó una metodología mixta en 5 fases. Se recopilaron datos de 50 estudiantes foráneos para programar las mecánicas en Godot. El prototipo integró módulos de gestión de tiempo y minijuegos (pixel-art). Se aplicó un pre-test a 85 estudiantes locales, seguido de sesiones de juego y un post-test a 63 usuarios.</p>
+            
+            <div class="ruta" aria-label="Fases">
+              <div class="fase f1"><span>1</span>Diagnóstico</div>
+              <div class="fase f2"><span>2</span>Desarrollo</div>
+              <div class="fase f3"><span>3</span>Pre-test</div>
+              <div class="fase f4"><span>4</span>Juego</div>
+              <div class="fase f5"><span>5</span>Post-test</div>
+            </div>
+            
+            <div class="capturas mt-1">
+              <figure><img src="img/escena-08.webp" alt="Escena"><figcaption>Camino a casa</figcaption></figure>
+              <figure><img src="img/minijuego-super-1.webp" alt="Súper"><figcaption>Gestión: Súper</figcaption></figure>
+              <figure><img src="img/minijuego-restaurante.webp" alt="Restaurante"><figcaption>Empleo local</figcaption></figure>
+            </div>
+          </section>
+
+          <section class="caja-texto interactivo-hover" aria-label="Análisis">
+            <h2 class="caja-titulo">ANÁLISIS DE RESULTADOS</h2>
+            <div id="graficas" class="graficas"></div>
+            <p class="nota">Gráfica de evolución de concientización (escala Likert). Pre-test vs Post-test.</p>
+          </section>
+
+          <!-- Pie movido al panel central -->
+          <footer class="pie">
+            <div class="camino"><div class="pepe" id="pepe"></div><div class="perro"></div></div>
+          </footer>
+        </div>
+
+        <!-- PANEL DERECHO (30cm) -->
+        <div class="panel panel-der">
+          
+          <section class="caja-texto interactivo-hover text-center" style="margin-top: 1cqw;">
+            <h2 class="caja-titulo">PLATAFORMA WEB</h2>
+            <img src="img/qr.webp" alt="Código QR" class="img-qr">
+            <p class="txt-qr">Escanea para acceder a la demo jugable</p>
+          </section>
+
+          <section class="caja-texto interactivo-hover">
+            <h2 class="caja-titulo">RESULTADO</h2>
+            <p style="margin-bottom: 0.8cqw;">El sistema demostró incrementos estadísticos en empatía cognitiva. Se visibilizaron parámetros de soledad y presupuesto. El 78% de los foráneos validó la simulación.</p>
+            <ul class="cifras">
+              <li><b data-n="4.64" data-a="4.86" data-d="2">4,64 → 4,86</b><span>Media concientización (de 5)</span></li>
+              <li><b>90% → 95%</b><span>Acuerdo general post-test</span></li>
+            </ul>
+          </section>
+
+          <section class="caja-texto interactivo-hover">
+            <h2 class="caja-titulo">CONCLUSIÓN</h2>
+            <p>Sí se cumplió la hipótesis: la combinación de narrativas interactivas con minijuegos permitió desarrollar un modelo altamente efectivo para sensibilizar a la comunidad. Este avance sienta bases para su implementación en programas universitarios.</p>
+          </section>
+
+          <section class="caja-texto interactivo-hover mt-auto">
+            <h2 class="caja-titulo">BIBLIOGRAFÍA</h2>
+            <ul class="biblio-lista">
+              <li>Deterding, S. et al. (2011). From game design elements to gamefulness. <i>ACM</i>.</li>
+              <li>Muñoz Díaz, L. (2026). Salud mental en estudiantes foráneos. <i>Rev. Psicología</i>.</li>
+              <li>Olivier, E. (2019). Empathy building through interactive narrative games. <i>Tech</i>.</li>
+            </ul>
+          </section>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<script src="lona.js"></script>
+</body>
+</html>
